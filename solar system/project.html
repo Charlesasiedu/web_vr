@@ -1,0 +1,338 @@
+
+<!--  1. I used A-frame technology -->
+
+<!-- 2.Reaosns for using a-frame
+a.It is easy to build in.It makes use of declarative HTML and its easy to read,
+understand, copy and paste.
+b.It makes use of WebVR.This makes it possible to experience VR in the browser.
+c.It has sevsral Learning Resourses.It is really easy to learn a-frame through the
+combination of documentation.
+d.It allows you to use 360 images, videos, create 3D environment or mix-and-match. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="aframe.min.js"></script>
+    <title> THE SOLAR SYSTEM</title>
+</head>
+<body>
+    
+<a-scene>
+
+  <a-assets>
+<img src="./images/sky.jpg" id="sky">
+<img src="./images/earth.jpg" id="e">
+<img src="./images/sun.jpg" id="s">
+<img src="./images/jupiter.jpg" id="j">
+<img src="./images/mercury.jpg" id="m">
+<img src="./images/mars.jpg" id="mars">
+<img src="./images/neptune.jpg" id="n">
+<img src="./images/saturn.jpg" id="sa">
+<img src="./images/uranus.jpg" id="u">
+<img src="./images/venus.jpg" id="v">
+<img src="./images/ven.jpg" id="ven">
+<img src="./images/saturn_ring_alpha.png" id="sat">
+<img src="./images/moon.jpg" id="moon">
+
+<audio id="au" src="./audio/Be_Magnified_Worship_Lyrics_Video(128k).mp3"></audio>
+
+  </a-assets>
+
+
+
+<a-entity position="0 0 150">
+    <a-camera><a-cursor color=#white></a-cursor></a-camera>
+
+
+
+</a-entity>
+
+<a-entity animation="property:rotation;to:0 360 0;loop:true;dur:800000;easing:linear;">
+    <a-sky src="#sky" rotation="0 -45 0"radius="8000"></a-sky>
+</a-entity>
+
+
+     <a-entity scale="2 2 2"position="0 -15 10">
+
+  <!--Sun-->
+<a-entity> 
+      <a-sphere position="0 0 -2"p="3"q="20" scale="7 7 7" 
+      sound="src: #au;on: click;" src="#s"></a-sphere>
+      <a-ring color="cyan" radius-inner="65"radius-outer="65.2" side="double" rotation="90 0 0"></a-ring>
+      <a-ring color="cyan" radius-inner="58"radius-outer="58.2" side="double" rotation="90 0 0"></a-ring>
+      <a-ring color="cyan" radius-inner="52"radius-outer="52.2" side="double" rotation="90 0 0"></a-ring>
+      <a-ring color="cyan" radius-inner="47"radius-outer="47.2" side="double" rotation="90 0 0"></a-ring>
+      <a-ring color="cyan" radius-inner="41"radius-outer="41.2" side="double" rotation="90 0 0"></a-ring>
+      <a-ring color="cyan" radius-inner="35"radius-outer="35.2" side="double" rotation="90 0 0"></a-ring>
+      <a-ring color="cyan" radius-inner="28"radius-outer="28.2" side="double" rotation="90 0 0"></a-ring>
+      <a-ring color="cyan" radius-inner="21"radius-outer="21.2" side="double" rotation="90 0 0"></a-ring>
+      <a-ring color="cyan" radius-inner="15"radius-outer="15.2" side="double" rotation="90 0 0"></a-ring>
+
+
+      
+
+
+
+
+</a-entity>
+    
+
+
+                           <!--MERCURY-->
+<a-entity animation="property:rotation;to:0 360 0;loop:true;dur:10000;easing:linear;">
+
+         <a-sphere position="15 0.7 0" 
+    scale="0.7 0.7 0.7"
+    animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;" src="#m">
+
+         </a-sphere>
+</a-entity>
+    
+                            <!--VENUS-->
+<a-entity animation="property:rotation;to:0 360 0;loop:true;dur:10500;easing:linear;">
+         <a-sphere position="21 1.1 0" 
+        scale="1.1 1.1 1.1"
+        animation="property:rotation; dur:1000; from:0 0 0; to:0 -360 0; loop:true;" src="#v">
+
+<!--Moon-->
+<a-sphere src="#moon"
+scale="0.09 0.09 0.09"
+position="0 0.5 -1.5"
+animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+
+<!--Moon-->
+<a-sphere src="#moon"
+scale="0.09 0.09 0.09"
+position="-1 -0.5 1.5"
+animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+
+
+<!--Moon-->
+<a-sphere src="#moon"
+scale="0.09 0.09 0.09"
+position="-1 0.5 -1.5"
+animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+
+<!--Moon-->
+<a-sphere src="#moon"
+scale="0.09 0.09 0.09"
+position="-0.5 0.7 -0.7"
+animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+
+
+         </a-sphere>
+        
+</a-entity>
+
+                         <!--EARTH-->
+<a-entity animation="property:rotation;to:0 360 0;loop:true;dur:11000;easing:linear;">
+
+        <a-sphere position="28 1.2 0" 
+   scale="1.2 1.2 1.2"
+   animation="property:rotation;dur:5000;from:0 0 0;to:0 360 0;loop:true;easing:linear;" src="#e">
+  
+
+
+   <!--Moon-->
+   <a-sphere src="#moon"
+   scale="0.09 0.09 0.09"
+   position="2 0 0"
+   animation="property:rotation; dur:500; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+</a-entity>
+
+
+
+
+
+                             <!--MARS-->
+<a-entity animation="property:rotation;to:0 360 0;loop:true;dur:11500;easing:linear;">
+
+         <a-sphere position="35 0.9 0" 
+    scale="0.9 0.9 0.9"
+    animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;" src="#mars">
+<!--Moon-->
+<a-sphere src="#moon"
+scale="0.09 0.09 0.09"
+position="0 0.5 -1.5"
+animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+
+<!--Moon-->
+<a-sphere src="#moon"
+scale="0.09 0.09 0.09"
+position="-1 -0.5 1.5"
+animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+
+
+<!--Moon-->
+<a-sphere src="#moon"
+scale="0.09 0.09 0.09"
+position="-1 0.5 -1.5"
+animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+
+<!--Moon-->
+<a-sphere src="#moon"
+scale="0.09 0.09 0.09"
+position="-0.5 0.7 -0.7"
+animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+
+
+         </a-sphere>
+</a-entity>
+
+                       <!--JUPITER-->
+                       <a-entity animation="property:rotation;to:0 360 0;loop:true;dur:12000;easing:linear;">
+
+                        <a-sphere position="41 2.25 0" 
+                   scale="2.25 2.25 2.25"
+                   animation="property:rotation; dur:5000; from:0 0 0; to:0 360 0; loop:true;easing:linear;" src="#j">
+                   <!--Moon-->
+                        <a-sphere src="#moon"
+                         scale="0.09 0.09 0.09"
+                         position="2 0 0"
+                         animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+                   <!--Moon-->
+                            <a-sphere src="#moon"
+                             scale="0.09 0.09 0.09"
+                             position="1 0.5 1.5"
+                             animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+                   
+                
+                 <!--Moon-->
+                 <a-sphere src="#moon"
+                 scale="0.09 0.09 0.09"
+                 position="-1 0.5 1.5"
+                 animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+                
+                <!--Moon-->
+                <a-sphere src="#moon"
+                scale="0.09 0.09 0.09"
+                position="0 0.5 -1.5"
+                animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+                
+                <!--Moon-->
+                <a-sphere src="#moon"
+                scale="0.09 0.09 0.09"
+                position="-1 -0.5 1.5"
+                animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+                
+                
+                <!--Moon-->
+                <a-sphere src="#moon"
+                scale="0.09 0.09 0.09"
+                position="-1 0.5 -1.5"
+                animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+                
+                <!--Moon-->
+                <a-sphere src="#moon"
+                scale="0.09 0.09 0.09"
+                position="-0.5 0.7 -0.7"
+                animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;"></a-sphere>
+                
+                       </a-sphere>
+                </a-entity>
+
+  <!--Saturn-->
+<a-entity animation="property:rotation;to:0 360 0;loop:true;dur:12500;easing:linear;">
+
+    <a-sphere position="47 2 0" 
+        scale="2 2 2"
+        animation="property:rotation; dur:4000; from:0 0 -45; to:0 -360 -45; loop:true;" src="#sa">
+       <a-cylinder src="#sat"
+                   height="0.05"
+                   radius="1.1"
+                   0pen-ended="true"
+                   side="double">
+        </a-cylinder>
+
+        <a-cylinder src="#sat"
+                   height="0.05"
+                   radius="1.2"
+                   0pen-ended="true"
+                   side="double">
+        </a-cylinder>
+
+        <a-cylinder src="#sat"
+        height="0.05"
+        radius="1.3"
+        0pen-ended="true"
+        side="double">
+        </a-cylinder>
+
+        <a-cylinder src="#sat"
+        height="0.05"
+        radius="1.4"
+        0pen-ended="true"
+        side="double">
+        </a-cylinder>
+
+        <a-cylinder src="#sat"
+        height="0.05"
+        radius="1.5"
+        0pen-ended="true"
+        side="double">
+         </a-cylinder> 
+         <a-cylinder src="#sat"
+                   height="0.05"
+                   radius="1.6"
+                   0pen-ended="true"
+                   side="double">
+        </a-cylinder>
+
+        <a-cylinder src="#sat"
+        height="0.05"
+        radius="1.7"
+        0pen-ended="true"
+        side="double">
+        </a-cylinder>
+
+        <a-cylinder src="#sat"
+        height="0.05"
+        radius="1.8"
+        0pen-ended="true"
+        side="double">
+        </a-cylinder>
+
+    </a-sphere>
+
+</a-entity>
+
+                  <!--Uranus-->
+                  <a-entity animation="property:rotation;to:0 360 0;loop:true;dur:13000;easing:linear;">
+
+                    <a-sphere position="52 1.5 0" 
+                    scale="1.5 1.5 1.5"
+                    animation="property:rotation; dur:3000; from:0 0 0; to:0 360 0; loop:true;" src="#u">
+                    </a-sphere>
+                </a-entity>
+                
+           
+
+                             <!--NEPTUNE-->
+<a-entity animation="property:rotation;to:0 360 0;loop:true;dur:13500;easing:linear;">
+
+         <a-sphere position="58 1.25 0" 
+    scale="1.25 1.25 1.25"
+    animation="property:rotation; dur:1000; from:0 0 0; to:0 360 0; loop:true;" src="#n">
+         </a-sphere>
+</a-entity>
+            
+                        <!--PLUTO-->
+<a-entity animation="property:rotation;to:0 360 0;loop:true;dur:14000;easing:linear;">
+
+    <a-sphere position="65 0 0" 
+        scale="0.5 0.5 0.5"
+        animation="property:rotation; dur:1000; from:0 0 0; to:0 -360 -45; loop:true;" src="#p"></a-sphere>
+        
+
+
+
+</a-entity>
+
+    
+</a-entity>
+
+</a-scene>
+
+</body>
+</html>
